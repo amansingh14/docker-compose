@@ -1,0 +1,26 @@
+  version: "3.3"
+
+  services:
+      web1:
+        build: ./web1
+        container_name: web1
+        ports:
+           - "81:80"
+      
+      web2:
+        build: ./web2
+        container_name: web2
+        ports:
+           - "82:80"
+      haproxy:
+         build: ./haproxy
+         container_name: haproxy
+         links:
+            - web1
+            - web2
+         ports:
+            - "80:80"
+         expose:
+            - "80"  
+
+        
