@@ -5,5 +5,8 @@ This docker compose installs and configure the haproxy server as load balancer, 
 
 ##How to use this docker-compose configuration
 on your run following command. Make sure docker-compose is been installed on your machine.
-
-(docker-compose up --build -d)
+```
+docker-compose up --build -d
+```
+###Port used.
+Port 80 is mapped to haproxy container to localhost.
