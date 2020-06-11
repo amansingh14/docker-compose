@@ -8,7 +8,7 @@
            - "81:80"
       
       web2:
-        build: ./web2
+        build: ./Web2
         container_name: web2
         ports:
            - "82:80"
